@@ -1,7 +1,13 @@
 public class GOLWorld extends World {
 
     public Object getAdditionalParams() {
-        return 0.4; //The initial chance of life in a cell TODO better
+        String preyProbPop = JOptionPane.showInputDialog(null, "Please enter the prey's intial population ");
+        float PreyPop = float.parsefloat(height);
+        System.out.println("the prey's intial population:" + preyProbPop);
+        String predatorProbPop = JOptionPane.showInputDialog(null, "Please enter the predator's intial population ");
+        float PredatorPop = float.parsefloat(height);
+        System.out.println("the predator's intial population:" + predatorProbPop);
+        return [PreyPop, PredatorPop];
     }
 
     public CellMatrix initCellMatrix() {
